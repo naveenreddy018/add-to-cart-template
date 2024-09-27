@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">1</h1>
+    <h1 id="b">2</h1>
+     <p class="a1">1</p>
+     <p class="a1">2</p>
+     <p class="a1">3</p>
+     <p class="a1">4</p>
+     <p class="a1">5</p>
+     <a href="#">hello</a>
+     <a href="#">hello</a>
+     <a href="#">hello</a>
+     <a href="#">hello</a>
+     <img src="#" alt="">
+     <img src="#" alt="">
+     <img src="#" alt="">
+     <input type="text" name="user" value="hello">
+     <input type="text" name="user">
+     <input type="text" name="user">
+     <script>
+        let id = document.getElementById("a")
+        let i2 = document.getElementsByClassName("a1")
+        console.log(id,i2)
+        console.log(document.images);
+        console.log(document.links);
+        console.log(document.body.tagName); 
+console.log(document.head.tagName);
+console.log(document.documentElement.tagName)
+console.log(document.getElementsByName("user"))
+     </script>
+   
+</body>
+</html> -->
+
+    <script >
+        // Declare variables
+var numberOfGrades = 0;
+var NL = "\n";
+
+
+
+// Functions
+function setQuantity() {
+  numberOfGrades = document.getElementById("quantity").value;
+
+  var inputBox = document.createElement("INPUT");
+  var BR = document.createElement("br"); // Break line
+  var gradeNumber = 1;
+  var gradeText = document.createTextNode("Grade " + gradeNumber + ":");
+
+  for (var i = 0; i < numberOfGrades; i++) {
+    alert(numberOfGrades);
+    document.getElementById("formDiv").appendChild(BR);
+   document.getElementById("formDiv").appendChild(gradeText);
+    document.getElementById("formDiv").appendChild(inputBox);
+    gradeNumber++;
+  }
+
+
+}
+    </script>
+  
+  </body>
+  
+</html>

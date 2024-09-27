@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        #ctn {
+            border: 2px solid;
+            padding: 16px;
+            font-size: 2rem;
+            margin: 10px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid w-50 m-5">
+        <input type="text" class="form-control" id="input">
+        <button class="btn btn-primary mt-3" id="btn">Add Notes</button>
+    </div>
+    <div class="container-fluid w-50 m-5" id="main">
+
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+let input = document.getElementById("input");
+let main = document.getElementById("main");
+
+btn.addEventListener("click", function () {
+    let div = document.createElement("div");
+    div.id = "ctn";
+    div.innerText = input.value;
+
+    let button = document.createElement("button");
+    button.innerText = "Delete";
+    div.appendChild(button);
+
+    button.addEventListener("click", function () {
+        div.remove();
+    })
+
+
+
+    main.appendChild(div);
+})
+    </script>
+</body>
+
+</html>
+
+
+
